@@ -21,12 +21,10 @@ app.listen(8000,()=>{
 })
 
 app.get('/', async (req, res) => {
-    res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
     res.send("API is Running");
 })
 
 app.get('/test', async (req, res) => {
-    res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
     res.send("API is Testing");
 })
 
@@ -43,12 +41,10 @@ app.post('/post',async(req,res)=>{
         }
     
         UserSchema.create(userdata)
-        res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
         res.send("OK")
 
     }
     else{
-        res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
 
         res.send("user Exist")
     }
