@@ -18,7 +18,7 @@ app.listen(8000,()=>{
     console.log('Started in 8000 PORT')
 })
 
-app.get('/', async () => {
+app.get('/', async (req, res) => {
     res.send("API is Running")
 })
 
