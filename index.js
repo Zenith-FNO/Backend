@@ -19,7 +19,7 @@ app.listen(8000,()=>{
 })
 
 app.get('/', async (req, res) => {
-    res.send("API is Running")
+    res.send("API is Running");
 })
 
 app.post('/post',async(req,res)=>{
