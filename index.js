@@ -18,6 +18,10 @@ app.listen(8000,()=>{
     console.log('Started in 8000 PORT')
 })
 
+app.get('/', async () => {
+    res.send("API is Running")
+})
+
 app.post('/post',async(req,res)=>{
 
     const emailexist = await UserSchema.exists({email:req.body.email});
