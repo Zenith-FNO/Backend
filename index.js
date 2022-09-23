@@ -22,6 +22,10 @@ app.get('/', async (req, res) => {
     res.send("API is Running");
 })
 
+app.get('/test', async (req, res) => {
+    res.send("API is Testing");
+})
+
 app.post('/post',async(req,res)=>{
 
     const emailexist = await UserSchema.exists({email:req.body.email});
