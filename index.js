@@ -11,9 +11,7 @@ dotenv.config();
 mongoose.connect(process.env.MONGO_URL,{useNewUrlParser: true,useUnifiedTopology: true})
 .then((result)=>{console.log("connected to db")}).catch((err)=>{console.log(err)});
 app.use(cors({
-    origin:'*', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200,
+    origin:'*'
   }));
 app.use(bodyParser.raw());
 app.use(bodyParser.json());
